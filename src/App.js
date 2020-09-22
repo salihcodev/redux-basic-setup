@@ -14,6 +14,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 // COMPONENTS:
 import Counter from './components/Counter';
+import Modal from './components/Modal';
 
 // create store.
 const store = createStore(
@@ -29,6 +30,7 @@ function App() {
   return (
     <Provider store={store}>
       <Counter hi="try" />
+      <Modal />
     </Provider>
   );
 }

@@ -8,6 +8,7 @@ import {
   ADD_5,
   REMOVE_ONE,
   REMOVE_5,
+  MODAL_OPEN,
 } from '../store/actions/MainActions';
 
 const Counter = ({
@@ -68,6 +69,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     reset: () => {
       dispatch({ type: RESET });
+      dispatch({
+        type: MODAL_OPEN,
+        payload: { name: 'Warning', text: 'You Just reset the counter!' },
+      });
     },
 
     addOne: () => {
